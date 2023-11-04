@@ -17,10 +17,12 @@ contract Token{
     function transfer(address to, uint amount)  external {
         require(balances[msg.sender]>=amount,"Not enought tokens");
         balances[msg.sender] -= amount; //balances[msg.sender]=balances[msg.sender]-amount;
-        balances[to]+=amount;
+        balances[to] += amount;
     }
 
     function balanceof(address account) external view returns(uint256){
         return balances[account];
     }
 }
+
+// another day with solidity testing
